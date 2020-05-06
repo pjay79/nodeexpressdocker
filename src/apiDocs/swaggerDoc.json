@@ -30,7 +30,7 @@
     "/contact": {
       "post": {
         "tags": [
-          "Create contact"
+          "Create new contact"
         ],
         "description": "Create new contact",
         "parameters": [
@@ -57,7 +57,7 @@
       },
       "get": {
         "tags": [
-          "Get contacts"
+          "Get all contacts"
         ],
         "summary": "Get all contacts",
         "produces": [
@@ -73,24 +73,24 @@
         }
       }
     },
-    "/users/{userId}": {
+    "/contact/{contactId}": {
       "parameters": [
         {
-          "name": "userId",
+          "name": "contactId",
           "in": "path",
           "required": true,
-          "description": "ID of user that we want to find",
+          "description": "contactId of contact we want to find",
           "type": "string"
         }
       ],
       "get": {
         "tags": [
-          "Users"
+          "Get one contact"
         ],
-        "summary": "Get user with given ID",
+        "summary": "Get contact with a given contactId",
         "responses": {
           "200": {
-            "description": "User is found",
+            "description": "Contact found",
             "schema": {
               "$ref": "#/definitions/Contact"
             }
