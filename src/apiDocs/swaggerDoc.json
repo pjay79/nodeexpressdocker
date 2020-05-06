@@ -137,23 +137,27 @@
   "definitions": {
     "User": {
       "required": [
+        "first_name",
+        "last_name",
         "email",
-        "_id"
+        "phone"
       ],
       "properties": {
-        "_id": {
+        "first_name": {
           "type": "string",
-          "uniqueItems": true
+          "example": "John"
+        },
+        "last_name": {
+          "type": "string",
+          "example": "Smith"
         },
         "email": {
           "type": "string",
-          "uniqueItems": true
+          "example": "js@js.com"
         },
-        "lastName": {
-          "type": "string"
-        },
-        "firstName": {
-          "type": "string"
+        "phone": {
+          "type": "string",
+          "example": 61418826661
         }
       }
     },
